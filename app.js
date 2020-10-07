@@ -8,6 +8,7 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const morgan = require ("morgan")
 
+
 //My routes
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
@@ -17,7 +18,7 @@ const orderRoutes = require("./routes/order");
 
 //DB Connection
 mongoose
-  .connect(process.env.DATABASE, {
+  .connect(process.env.uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
